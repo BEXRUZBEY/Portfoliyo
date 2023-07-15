@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'app/assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="{% static 'app/assets/css/meyawo.css' %}">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+<!-- Page Navbar -->
+<nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+    <div class="container">
+        <a class="logo" href="#">My Portfolio</a>
+        <ul class="nav">
+            <li class="item">
+                <a class="link" href="#home">Home</a>
+            </li>
+            <li class="item">
+                <a class="link" href="#about">About</a>
+            </li>
+            <li class="item">
+                <a class="link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="item">
+                <a class="link" href="#testmonial">Testmonial</a>
+            </li>
+            <li class="item">
+                <a class="link" href="#blog">Blog</a>
+            </li>
+            <li class="item">
+                <a class="link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </a>
+    </div>
+</nav><!-- End of Page Navbar -->
+
+<!-- page header -->
+<header id="home" class="header">
+    <div class="overlay"></div>
+    <div class="header-content container">
+        <h1 class="header-title">
+            <span class="up">HI!</span>
+            <span class="down">I am Behruz Abduqodirov</span>
+        </h1>
+        <p class="header-subtitle">PYTHON WEB DESIGNER</p>
+
+        <button class="btn btn-primary">Visit My Works</button>
+    </div>
+</header><!-- end of page header -->
+
+<!-- about section -->
+<section class="section pt-0" id="about">
+    <!-- container -->
+    <div class="container text-center">
+        <!-- about wrapper -->
+        <div class="about">
+            <div class="about-img-holder">
+                <img src="{% static 'app/assets/imgs/Behruz.png' %}" style="width: 400px" height="300px" class="about-img"
+                     alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+            </div>
+            <div class="about-caption">
+                <p class="section-subtitle">Who Am I ?</p>
+                <h2 class="section-title mb-3">About Me</h2>
+                <p>
+                    My name is Behruz Abdukadirov, I am interested in the field of IT, I am currently studying at IT
+                    CITY training center in Kashkadarya region. I studied IT from the beginning.
+                </p>
+                <a href="{% static 'app/assets/imgs/Behruzs Resume.pdf' %}" id="down" download/>
+                <button class="btn-rounded btn btn-outline-primary mt-4"
+                        onclick="document.getElementById('down').clisk()">Download CV
+                </button>
+                </a>
+            </div>
+        </div><!-- end of about wrapper -->
+    </div><!-- end of container -->
+</section> <!-- end of about section -->
+
+<!-- service section -->
+<section class="section" id="service">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Do ?</p>
+        <h6 class="section-title mb-6">Skills</h6>
+        <!-- row -->
+        <div class="row">
+            {% for skill in skills %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static 'app/assets/imgs/pencil-case.svg' %}"
+                                 alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                 class="icon">
+                            <h6 class="title">{{ skill.title }}</h6>
+                            <p class="subtitle">{{ skill.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div><!-- end of row -->
+    </div>
+</section><!-- end of service section -->
+
+<!-- portfolio section -->
+<section class="section" id="portfolio">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Did ?</p>
+        <h6 class="section-title mb-6">Portfolio</h6>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img src="{% static 'app/assets/imgs/folio-1.jpg' %}" class="portfolio-card-img"
+                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                    <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>
+                        </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="{% static 'app/assets/imgs/folio-2.jpg' %}"
+                         class="img-responsive rounded"
+                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h4>
+                                    <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>
+                        </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="{% static 'app/assets/imgs/folio-3.jpg' %}"
+                         class="img-responsive rounded"
+                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h4>
+                                    <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>
+                        </span>
+                </a>
+            </div>
+        </div><!-- end of row -->
+    </div><!-- end of container -->
+</section> <!-- end of portfolio section -->
+
+
+<!-- section -->
+<section class="section-sm bg-primary">
+    <!-- container -->
+    <div class="container text-center text-sm-left">
+        <!-- row -->
+        <div class="row align-items-center">
+            <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                <h6 class="title text-light">Want to work with me?</h6>
+                <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+            </div>
+            <div class="col-sm offset-sm-2 offset-md-3">
+                <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+            </div>
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</section> <!-- end of section -->
+
+<!-- testimonial section -->
+<section class="section" id="testmonial">
+    <div class="container text-center">
+        <p class="section-subtitle">What Think Client About Me ?</p>
+        <h6 class="section-title mb-6">Testmonial</h6>
+
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% static 'app/assets/imgs/avatar2.jpg' %}" class="testimonial-card-img"
+                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
+                            adipisci nihil.</p>
+                        <h6 class="testimonial-card-title">Emily Reb</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% static 'app/assets/imgs/avatar3.jpg' %}" class="testimonial-card-img"
+                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
+                            adipisci nihil.</p>
+                        <h6 class="testimonial-card-title">Emily Reb</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end of container -->
+</section> <!-- end of testimonial section -->
+
+<!-- blog section -->
+<section class="section" id="blog">
+    <!-- container -->
+    <div class="container text-center">
+        <p class="section-subtitle">Recent Posts?</p>
+        <h6 class="section-title mb-6">Blog</h6>
+        <!-- blog-wrapper -->
+        {% for blog in blogs %}
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="{{ blog.image.url }}" class="blog-card-img"
+                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">{{ blog.title }}</h5>
+
+                    <p class="blog-card-caption">
+                        <a href="#">By: {{ blog.user }}</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a>
+                    </p>
+                    <p><b>{{ blog.text }}</b>
+                    </p>
+                </div>
+            </div><!-- end of blog wrapper -->
+        {% endfor %}
+        <a href="{% url 'blog-list' %}" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+
+    </div><!-- end of container -->
+</section><!-- end of blog section -->
+
+<!-- contact section -->
+<section class="section" id="contact">
+    <div class="container text-center">
+        <p class="section-subtitle">How can you communicate?</p>
+        <h6 class="section-title mb-5">Contact Me</h6>
+        <!-- contact form -->
+        <form action="{% url 'contact' %}" method="post" class="contact-form col-md-10 col-lg-8 m-auto">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <input type="text" size="50" class="form-control" name="username" placeholder="User Name" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email" requried>
+                </div>
+                <div class="form-group col-sm-12">
+                        <textarea name="text" id="comment" rows="6" class="form-control"
+                                  placeholder="Write Something"></textarea>
+                </div>
+                <div class="form-group col-sm-12 mt-3">
+                    <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                </div>
+            </div>
+        </form><!-- end of contact form -->
+    </div><!-- end of container -->
+</section><!-- end of contact section -->
+
+<!-- footer -->
+<div class="container">
+    <footer class="footer">
+        <p class="mb-0">Abduqodirov Behruz
+            <script>document.write(new Date().getFullYear())</script> &copy; <a
+                    href="http://www.devcrud.com"></a> <a
+                    href="https://themewagon.com"></a>
+        </p>
+        <div class="social-links text-right m-auto ml-sm-auto">
+            <a href="https://github.com/bexruz008" target="_blank" class="link"><i class="ti-github"></i></a>
+            <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+            <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+            <a href="https://leetcode.com/BEHRUZ_008/" target="_blank" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" id="leetcode">
+                    <path fill="#B3B1B0"
+                          d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z"></path>
+                    <path fill="#E7A41F"
+                          d="m3.482 18.187 4.313 4.361c.973.979 2.318 1.452 3.803 1.452 1.485 0 2.83-.512 3.805-1.494l2.588-2.637c.51-.514.492-1.365-.039-1.9-.531-.535-1.375-.553-1.884-.039l-2.676 2.607c-.462.467-1.102.662-1.809.662s-1.346-.195-1.81-.662l-4.298-4.363c-.463-.467-.696-1.15-.696-1.863 0-.713.233-1.357.696-1.824l4.285-4.38c.463-.467 1.116-.645 1.822-.645s1.346.195 1.809.662l2.676 2.606c.51.515 1.354.497 1.885-.038.531-.536.549-1.387.039-1.901l-2.588-2.636a4.994 4.994 0 0 0-2.392-1.33l-.034-.007 2.447-2.503c.512-.514.494-1.366-.037-1.901-.531-.535-1.376-.552-1.887-.038l-10.018 10.1C2.509 11.458 2 12.813 2 14.311c0 1.498.509 2.896 1.482 3.876z"></path>
+                    <path fill="#070706"
+                          d="M8.115 22.814a2.109 2.109 0 0 1-.474-.361c-1.327-1.333-2.66-2.66-3.984-3.997-1.989-2.008-2.302-4.937-.786-7.32a6 6 0 0 1 .839-1.004L13.333.489c.625-.626 1.498-.652 2.079-.067.56.563.527 1.455-.078 2.066-.769.776-1.539 1.55-2.309 2.325-.041.122-.14.2-.225.287-.863.876-1.75 1.729-2.601 2.618-.111.116-.262.186-.372.305-1.423 1.423-2.863 2.83-4.266 4.272-1.135 1.167-1.097 2.938.068 4.127 1.308 1.336 2.639 2.65 3.961 3.974.067.067.136.132.204.198.468.303.474 1.25.183 1.671-.321.465-.74.75-1.333.728-.199-.006-.363-.086-.529-.179z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</div> <!-- end of page footer -->
+
+<!-- core  -->
+<script src="{% static 'app/assets/vendors/themify-icons' %}"></script>
+<script src="{% static 'app/assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+
+<!-- bootstrap 3 affix -->
+<script src="{% static 'app/assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+<!-- Meyawo js -->
+<script src="{% static 'app/assets/js/meyawo.js' %}"></script>
+
+</body>
+
+</html>
